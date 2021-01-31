@@ -31,7 +31,7 @@ https://0a0690195b38.ngrok.io/webhooks/facebook/webhook
 
 
 # Project python --version
-python 3.7.7
+python 3.8
 
 # Active Env
 python3 -m venv --system-site-packages ./venv
@@ -55,3 +55,21 @@ https://www.miai.vn/2020/03/19/rasa-series-4-cai-dat-rasa-theo-cach-moi-sieu-nha
 
 # Có vấn đề với version rasa
 pip install -r requirments.txt  --use-feature=2020-resolver
+
+
+# Change Version Python 3.9 xuống 3.8
+
+brew search python
+
+----- python@3.8 ✔
+
+brew link python@3.8
+
+brew unlink python@3.9
+brew link --overwrite python@3.8
+
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+source ~/.bash_profile
+
+# ________ END ________
